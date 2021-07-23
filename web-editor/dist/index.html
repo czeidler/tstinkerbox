@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%;">
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      .main-container {
+        display: flex;
+        min-height: 100%;
+        flex-direction: row;
+        align-items: stretch;
+      }
+      .editor-container {
+        flex-grow: 1;
+      }
+      .output-container {
+        display: flex;
+        flex-direction: column;
+        max-height: 100vh;
+        width: 700px;
+        background-color: ghostwhite;
+      }
+      #loader {
+        position: relative;
+        z-index: 1000;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: rgba( 205, 205, 205, 0.4 );
+      }
+      #monaco-editor-embed {
+        height: 100%;
+        width: 100%;
+      }
+      .output-header {
+        display: flex;
+        background-color: rgba( 230, 230, 230 );;
+        width: 100%-10px;
+        justify-content: space-between;
+        padding: 5px 5px 5px 10px;
+      }
+      .results-label {
+        font: 1.2em courier;
+        align-self: baseline;
+      }
+      #clear-button {
+        font: 1.2em courier;
+        align-self: baseline;
+        padding: 4px 4px 0px 4px;
+      }
+      .log-output {
+        flex-grow: 1;
+        overflow: auto;
+        padding: 5px 5px 5px 10px
+      }
+      .log-line {
+        display: flex;
+        flex-direction: row;
+      }
+    </style>
+  </head>
+  <body style="height: 100%; margin: 0px; overflow: hidden;">
+    <div class="main-container">
+      <div class="editor-container">
+        <div id="loader">Loading...</div>
+        <div id="monaco-editor-embed"></div>
+      </div>
+      <div class="output-container">
+        <div class="output-header">
+          <div class="results-label">Log</div>
+          <button id="clear-button">Clear</button>
+        </div>
+        <div class="log-output" id="output"></div>
+      </div>
+    </div>
+    <script src="./bundle.js"></script>
+  </body>
+</html>

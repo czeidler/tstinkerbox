@@ -1,0 +1,6 @@
+
+Pako (MIT): https://github.com/nodeca/pako
+JSON to TS: https://github.com/MariusAlch/json-to-ts
+JWT (MIT): https://github.com/auth0/node-jsonwebtoken
+nanoid (MIT): https://github.com/ai/nanoid/#custom-alphabet-or-size
+uuid (MIT): https://github.com/thenativeweb/uuidv4
