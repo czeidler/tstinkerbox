@@ -2,6 +2,7 @@ import { encoding } from './encoding';
 import { hashing } from './hashing';
 import { http } from './http';
 import { jwt } from './jwt';
+import { time } from './time';
 import { typescript } from './typescript';
 import { random } from './random';
 import { zlib } from './zlib';
@@ -17,6 +18,8 @@ export const tb = {
   jwt,
   /** Random ids or bytes*/
   random,
+  /** Time and date */
+  time,
   /** TypeScript related helper */
   typescript,
   /** Lib to zip/unzip files */
